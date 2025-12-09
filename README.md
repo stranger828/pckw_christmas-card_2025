@@ -1,28 +1,36 @@
-# Christmas Page 🎄
+# 2025 Christmas Card 🎄
 
-A simple Christmas-themed web page featuring:
-- A festive greeting message 🎅
-- Background music with Christmas carols 🎵
-- Snowfall effect ❄️
-- Fully responsive design 🌟
+A digital Christmas card for the PCKW 90th Session, featuring a dynamic member list, festive music, and snowfall effects.
 
-## Features
-- **Greeting Message**: A beautifully styled greeting for Christmas.
-- **Music Player**: Plays a Christmas carol in the background.
-- **Snow Effect**: Adds a visual snowfall animation to the page.
-- **Responsive Design**: Adjusts seamlessly to different screen sizes.
+## Features ✨
 
-## How to View the Page
-Visit the live page here: [Christmas Page](https://stranger828.github.io/christmas-page/)
+*   **Dynamic Member List**: Automatically renders the Executive Committee, Departments, Past Presidents, Cooperating Committee, and Staff from `members.json`.
+*   **Responsive Layout**: Optimized for both desktop and mobile viewing with a clean, organized structure.
+*   **Festive Atmosphere**:
+    *   Falling snow animation ❄️
+    *   Background Christmas carol music 🎵
+*   **Refined Typography**: Custom font handling and specific layout adjustments for officer role alignment.
 
-## Files Included
-- `index.html`: Main HTML file.
-- `style.css`: CSS styles for the page.
-- `script.js`: JavaScript for snowfall effect.
-- `images/`: Folder containing the Christmas-themed images.
-- `music/`: Folder containing Christmas carol audio files.
+## Project Structure
 
-## How to Use
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/<YourUsername>/<RepositoryName>.git
+*   `index.html`: The main entry point.
+*   `style.css`: Custom styling for the card layout and typography.
+*   `script.js`: Handles data fetching, dynamic rendering of the member list, and the snowfall effect.
+*   `members.json`: Data source containing the organizational structure and names.
+*   `music/`: Contains the background music file.
+*   `images/`: Contains necessary image assets.
+
+## How to View (GitHub Pages)
+
+This project is hosted on GitHub Pages. You can view the live site at:
+
+**[https://stranger828.github.io/pckw_christmas-card_2025/](https://stranger828.github.io/pckw_christmas-card_2025/)**
+*(Note: Ensure GitHub Pages is enabled in the repository settings)*
+
+## Development
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/stranger828/pckw_christmas-card_2025.git
+    ```
+2.  Open `index.html` in your browser (Live Server recommended for best local experience).
