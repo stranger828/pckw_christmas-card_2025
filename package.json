@@ -1,0 +1,16 @@
+{
+  "name": "2025_christmas-page",
+  "version": "1.0.0",
+  "description": "A simple Christmas-themed web page featuring: - A festive greeting message 🎅 - Background music with Christmas carols 🎵 - Snowfall effect ❄️ - Fully responsive design 🌟",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}
