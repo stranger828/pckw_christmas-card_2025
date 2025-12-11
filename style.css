@@ -84,26 +84,19 @@ body {
 .english-greeting {
     font-family: 'Great Vibes', cursive;
     font-size: 3.5em;
-    /* Slightly larger */
     margin: 10px 0;
 
-    /* Gold Glitter Effect */
-    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-    background-size: 200% auto;
-    color: #e6b800;
-    /* Fallback */
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 4s linear infinite;
-    text-shadow: none;
-    /* Text shadow conflicts with background-clip sometimes, or needs to be specific */
-}
+    /* Solid bright color for better visibility on all devices */
+    color: #ffd700;
+    /* Bright Gold */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 2px 2px 2px rgba(0, 0, 0, 0.8);
 
-@keyframes shine {
-    to {
-        background-position: 200% center;
-    }
+    /* Removed complex gradient that was appearing dark */
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: initial;
+    animation: none;
 }
 
 /* Member List Footer */
@@ -156,6 +149,21 @@ strong {
     gap: 0;
     margin-top: 15px;
     margin-right: 80px;
+}
+
+/* Mobile Layout Alignment Fix */
+@media (max-width: 768px) {
+    .officers-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* 2 columns for better spacing */
+        margin-right: 0;
+        gap: 15px;
+        /* Add veritcal spacing between rows */
+    }
+
+    .officers-grid>div {
+        margin-bottom: 10px;
+    }
 }
 
 .officers-grid>div {
