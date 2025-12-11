@@ -1,3 +1,7 @@
+:root {
+    color-scheme: dark;
+}
+
 body {
     margin: 0;
     font-family: 'Noto Serif KR', serif;
@@ -164,7 +168,6 @@ strong {
     display: inline-block;
     width: 7.2em;
     /* Increased to prevent '역사기록부서기' wrapping */
-    text-align: right;
     margin-right: 10px;
     font-weight: 700;
     color: #006400;
@@ -185,7 +188,6 @@ strong {
     font-size: 0.85em;
     color: #555;
     margin-left: 0px;
-    text-align: right;
 }
 
 audio {
