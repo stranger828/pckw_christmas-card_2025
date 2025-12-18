@@ -207,6 +207,17 @@ strong {
         justify-content: center;
         place-items: center;
     }
+
+    /* Mobile Text Size Adjustments */
+    .verse-text {
+        font-size: 1.0em;
+        /* Reduced from 1.2em */
+    }
+
+    .greeting-text {
+        font-size: 1.1em;
+        /* Reduced from 1.3em */
+    }
 }
 
 .preserve-space {
