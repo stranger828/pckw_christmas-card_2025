@@ -402,6 +402,10 @@ const membersData = {
         {
             "role": "계속교육원국장",
             "name": "백지은"
+        },
+        {
+            "role": "관리국장",
+            "name": "서원태"
         }
     ]
 };
