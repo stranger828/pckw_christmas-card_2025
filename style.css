@@ -209,6 +209,10 @@ strong {
     }
 
     /* Mobile Text Size Adjustments */
+    .english-greeting {
+        font-size: 1.2em;
+    }
+
     .verse-text {
         font-size: 0.7em;
         /* Reduced from 1.2em */
