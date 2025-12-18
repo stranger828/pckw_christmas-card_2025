@@ -165,6 +165,12 @@ strong {
     }
 }
 
+@media (max-width: 480px) {
+    .officers-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
 .officers-grid>div {
     display: flex;
     flex-direction: column;
