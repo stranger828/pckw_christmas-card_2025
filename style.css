@@ -186,6 +186,29 @@ strong {
     color: #006400;
 }
 
+/* Vice President Grid Styles */
+.vp-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.vp-grid span {
+    white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+    .vp-grid {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 5px 12px;
+        /* row gap, column gap */
+        justify-content: center;
+        place-items: center;
+    }
+}
+
 .preserve-space {
     white-space: pre-wrap;
 }

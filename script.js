@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Executives (임원)
     // Row 1: 직전회장, 부회장
-    const execOrderRow1 = ["직전회장", "부회장"];
+    const execOrderRow1 = ["직전회장"]; // Modified: Removed "부회장" to render separately
 
     // Officer Pairs for vertical alignment (Chief / Deputy)
     const officerPairs = [
@@ -477,10 +477,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Container 1 (Past President, Vice President)
+        // Container 1 (Past President)
+        const pastPrezRoles = ["직전회장"];
         const container1 = document.createElement('div');
-        renderRoles(execOrderRow1, container1);
+        renderRoles(pastPrezRoles, container1);
         row.appendChild(container1);
+
+        // Container 2 (Vice President - Custom Grid)
+        if (groupedExecs["부회장"]) {
+            const vpDiv = document.createElement('div');
+            vpDiv.className = 'member-group vp-container';
+            vpDiv.style.flexDirection = 'column';
+            vpDiv.style.alignItems = 'center';
+
+            vpDiv.innerHTML = `<div class="role" style="margin-bottom: 5px;">부회장</div>`;
+
+            const vpGrid = document.createElement('div');
+            vpGrid.className = 'vp-grid';
+            vpGrid.innerHTML = groupedExecs["부회장"].map(name => `<span>${name}</span>`).join('');
+
+            vpDiv.appendChild(vpGrid);
+            row.appendChild(vpDiv);
+        }
 
         // Grid for Officers (Pairs)
         const officersGrid = document.createElement('div');
