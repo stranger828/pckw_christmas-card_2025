@@ -533,7 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Render any remaining roles not in expected lists (fallback)
         // Flatten pairs to check leftovers
         const allOfficerRoles = officerPairs.flat();
-        const allExpected = [...execOrderRow1, ...allOfficerRoles];
+        const allExpected = [...execOrderRow1, "부회장", ...allOfficerRoles];
         const leftovers = Object.keys(groupedExecs).filter(role => !allExpected.includes(role));
 
         if (leftovers.length > 0) {
