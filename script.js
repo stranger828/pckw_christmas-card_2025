@@ -644,3 +644,36 @@ document.addEventListener('DOMContentLoaded', () => {
         memberContainer.appendChild(staffGrid);
     }
 });
+
+// Audio Autoplay Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.querySelector('audio');
+    if (audio) {
+        // Try to play immediately
+        const playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Autoplay prevented by browser. Waiting for interaction.");
+
+                const playOnInteraction = () => {
+                    audio.play()
+                        .then(() => {
+                            // Remove listeners once played
+                            document.removeEventListener('click', playOnInteraction);
+                            document.removeEventListener('touchstart', playOnInteraction);
+                            document.removeEventListener('keydown', playOnInteraction);
+                            document.removeEventListener('scroll', playOnInteraction);
+                        })
+                        .catch(err => console.log("Still failed to play:", err));
+                };
+
+                // Add listeners for common interactions
+                document.addEventListener('click', playOnInteraction);
+                document.addEventListener('touchstart', playOnInteraction);
+                document.addEventListener('keydown', playOnInteraction);
+                document.addEventListener('scroll', playOnInteraction);
+            });
+        }
+    }
+});
